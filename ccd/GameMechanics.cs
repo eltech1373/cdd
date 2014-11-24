@@ -13,17 +13,13 @@ namespace ccd
 
         public GameMechanics()
         {
-            _player1.Deck = _createNewDeck();
-            _player2.Deck = _createNewDeck();
+            _player1 = new Player();
+            _player2 = new Player();
         }
 
-        private List<Card> _createNewDeck()
+        public void PlayCard(int playerNumber)
         {
-            List<Card> newDeck = new List<Card>();
-            newDeck.Add(new Card() {Atk = 1, Hp = 2});
-            newDeck.Add(new Card() {Atk = 2, Hp = 1});
-
-            return newDeck;
+            
         }
     }
 }

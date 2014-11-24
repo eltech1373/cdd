@@ -1,1 +1,2 @@
 C:\Users\lada.karaseva\Documents\GitHub\ccd\ccd\bin\Debug\ccd.exe.config
+C:\Users\lada.karaseva\Documents\GitHub\eltech_ccd\cdd\ccd\bin\Debug\ccd.exe.config

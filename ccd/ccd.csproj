@@ -63,6 +63,7 @@
     </Compile>
     <Compile Include="Containers.cs" />
     <Compile Include="GameMechanics.cs" />
+    <Compile Include="Helper.cs" />
     <Compile Include="MainWindow.xaml.cs">
       <DependentUpon>MainWindow.xaml</DependentUpon>
       <SubType>Code</SubType>
