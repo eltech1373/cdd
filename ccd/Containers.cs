@@ -10,6 +10,7 @@ namespace ccd
     {
         public List<Card> Deck = new List<Card>();
         public List<Card> Hand = new List<Card>();
+        public List<Card> Table = new List<Card>();
         public int Hp;
         public int Gold;
         public int Morale;
@@ -24,6 +25,7 @@ namespace ccd
             Hand.Add(newDeck[0]);
             newDeck.Remove(newDeck[0]);
             Deck = newDeck;
+            Table = new List<Card>();
         }
     }
 
@@ -34,6 +36,8 @@ namespace ccd
         public int Rang = 1;
         public CardSpecType SpecialType = CardSpecType.Nothing;
         public CardType Type = CardType.Unit;
+        public bool Block;
+        public int SpecialValue;
     }
 
     public enum CardSpecType
