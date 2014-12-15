@@ -47,8 +47,8 @@ namespace ccd
 
             if (user.Id != Guid.Empty)
             {
-                var something = new Frame();
-                something.Navigate(typeof(GameForm), null);
+                GameForm form = new GameForm();
+                form.Show();
             }
             else
             {
