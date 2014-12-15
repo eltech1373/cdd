@@ -61,7 +61,9 @@
       <DependentUpon>App.xaml</DependentUpon>
       <SubType>Code</SubType>
     </Compile>
+    <Compile Include="CardCollection.cs" />
     <Compile Include="Containers.cs" />
+    <Compile Include="DatabaseWorker.cs" />
     <Compile Include="GameMechanics.cs" />
     <Compile Include="Helper.cs" />
     <Compile Include="MainWindow.xaml.cs">

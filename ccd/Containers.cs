@@ -31,6 +31,7 @@ namespace ccd
 
     public class Card
     {
+        public string Name;
         public int Hp;
         public int Atk;
         public int Rang = 1;
@@ -38,6 +39,14 @@ namespace ccd
         public CardType Type = CardType.Unit;
         public bool Block;
         public int SpecialValue;
+
+        public Card(string name, int hp, int atk, int rang)
+        {
+            Name = name;
+            Hp = hp;
+            Atk = atk;
+            Rang = rang;
+        }
     }
 
     public enum CardSpecType

@@ -11,8 +11,8 @@ namespace ccd
         public static List<Card> CreateNewDeck()
         {
             List<Card> newDeck = new List<Card>();
-            newDeck.Add(new Card() { Atk = 1, Hp = 2 });
-            newDeck.Add(new Card() { Atk = 2, Hp = 1 });
+            newDeck.Add(new Card("test1", 1, 2, 1));
+            newDeck.Add(new Card("test2", 2, 1, 1));
 
             return newDeck;
         }

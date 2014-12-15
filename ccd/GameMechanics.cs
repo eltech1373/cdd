@@ -20,7 +20,7 @@ namespace ccd
 
         public void Attack(Card atkCard, Card defCard)
         {
-            if (atkCard.Block)
+            if (atkCard.Block || atkCard.Type == CardType.Building)
             {
                 return;
             }
