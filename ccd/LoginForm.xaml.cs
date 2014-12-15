@@ -26,7 +26,7 @@ namespace ccd
             loginButton.Click += LoginButtonOnClick;
         }
 
-        private void LoginButtonOnClick(object sender, RoutedEventArgs routedEventArgs)
+        private void LoginButtonOnClick(object sender, RoutedEventArgs e)
         {
             errorTextBox.Visibility = Visibility.Collapsed;
             User user = new User()
@@ -47,7 +47,8 @@ namespace ccd
 
             if (user.Id != Guid.Empty)
             {
-                //success
+                var something = new Frame();
+                something.Navigate(typeof(GameForm), null);
             }
             else
             {
