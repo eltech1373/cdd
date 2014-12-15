@@ -23,6 +23,7 @@ namespace ccd
         public MainWindow()
         {
             InitializeComponent();
+            DatabaseWorker.CreateCard(new Card("test", 1, 2, 1));
         }
     }
 }

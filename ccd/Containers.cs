@@ -47,6 +47,11 @@ namespace ccd
             Atk = atk;
             Rang = rang;
         }
+
+        public Card()
+        {
+            
+        }
     }
 
     public enum CardSpecType
