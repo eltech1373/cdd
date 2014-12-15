@@ -54,6 +54,14 @@ namespace ccd
         }
     }
 
+    public class User
+    {
+        public string Name;
+        public string Pass;
+        public UserAccessType Type;
+        public Guid Id;
+    }
+
     public enum CardSpecType
     {
         Nothing = 0,
@@ -68,5 +76,11 @@ namespace ccd
     {
         Unit = 1,
         Building = 2
+    }
+
+    public enum UserAccessType
+    {
+        Admin = 0,
+        User = 1
     }
 }

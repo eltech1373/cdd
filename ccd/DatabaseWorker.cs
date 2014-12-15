@@ -56,5 +56,27 @@ namespace ccd
             }
             return newCard;
         }
+        
+        public static void Login(User user)
+        {
+            using (var myConnection = new SqlConnection(_connectionString))
+            {
+                string oString = "select * from [user] where user_name like @name and user_pass like @pass";
+                var oCmd = new SqlCommand(oString, myConnection);
+                oCmd.Parameters.AddWithValue("@name", "'" + user.Name + "'");
+                oCmd.Parameters.AddWithValue("@pass", "'" + user.Pass + "'");
+                myConnection.Open();
+                using (SqlDataReader oReader = oCmd.ExecuteReader())
+                {
+                    while (oReader.Read())
+                    {
+                        user.Type = (UserAccessType) oReader["user_type"];
+                        user.Id = new Guid(oReader["user_pass"].ToString());
+                    }
+
+                    myConnection.Close();
+                }
+            }
+        }
     }
 }

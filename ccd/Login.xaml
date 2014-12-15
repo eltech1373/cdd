@@ -1,0 +1,13 @@
+﻿<Window x:Class="ccd.LoginWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        Title="LoginWindow" Height="168" Width="354" ResizeMode="NoResize">
+    <Grid>
+        <TextBlock TextWrapping="Wrap" Text="Логин" Margin="10,10,-10,-10" HorizontalAlignment="Left" VerticalAlignment="Top"/>
+        <TextBlock TextWrapping="Wrap" Text="Пароль" Margin="10,48,-10,-48" HorizontalAlignment="Left" VerticalAlignment="Top"/>
+        <TextBox x:Name="loginTextBox" TextWrapping="Wrap" Width="120" Height="20" Margin="114,48,114,71" HorizontalAlignment="Left" VerticalAlignment="Top"/>
+        <PasswordBox x:Name="passwordBox" HorizontalAlignment="Left" VerticalAlignment="Top" Width="120" Height="20" Margin="114,10,0,0"/>
+        <Button x:Name="loginButton" Content="Войти" HorizontalAlignment="Left" VerticalAlignment="Top" Width="120" Height="20" Margin="114,86,0,0"/>
+        <TextBlock x:Name="errorTextBox" HorizontalAlignment="Left" TextWrapping="Wrap" Text="Ошибка! Проверьте логин и пароль" VerticalAlignment="Top" Width="212" Foreground="#FF830404" Height="16" Margin="70,111,0,0" Visibility="Hidden"/>
+    </Grid>
+</Window>
