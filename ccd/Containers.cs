@@ -20,11 +20,8 @@ namespace ccd
             Hp = 30;
             Gold = 5;
             Morale = 0;
-            var newDeck = Helper.CreateNewDeck();
-            Hand = new List<Card>();
-            Hand.Add(newDeck[0]);
-            newDeck.Remove(newDeck[0]);
-            Deck = newDeck;
+            Hand = Helper.CreateNewDeck(Helper.HandCount);
+            Deck = Helper.CreateNewDeck(Helper.DeckCount);
             Table = new List<Card>();
         }
     }

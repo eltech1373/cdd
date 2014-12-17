@@ -15,4 +15,3 @@ C:\Users\lada.karaseva\Documents\GitHub\eltech_ccd\cdd\ccd\obj\Debug\LoginForm.g
 C:\Users\lada.karaseva\Documents\GitHub\eltech_ccd\cdd\ccd\obj\Debug\MainWindow.baml
 C:\Users\lada.karaseva\Documents\GitHub\eltech_ccd\cdd\ccd\obj\Debug\MainWindow.g.cs
 C:\Users\lada.karaseva\Documents\GitHub\eltech_ccd\cdd\ccd\obj\Debug\GeneratedInternalTypeHelper.g.cs
-C:\Users\lada.karaseva\Documents\GitHub\eltech_ccd\cdd\ccd\obj\Debug\ccd_MarkupCompile.lref

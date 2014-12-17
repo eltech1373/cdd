@@ -1,4 +1,5 @@
 ﻿using System;
+using System.Collections.Generic;
 using System.Data;
 using System.Data.SqlClient;
 
@@ -28,6 +29,36 @@ namespace ccd
                         card.SpecialType = (CardSpecType) oReader["card_special_type"];
                         card.SpecialValue = (int) oReader["card_special_value"];
                         card.Type = (CardType) oReader["cardType"];
+                    }
+
+                    myConnection.Close();
+                }
+            }
+            return card;
+        }
+
+        public static List<Card> GetAllCards()
+        {
+            List<Card> card = new List<Card>();
+            using (var myConnection = new SqlConnection(_connectionString))
+            {
+                string oString = "select * from [card]";
+                var oCmd = new SqlCommand(oString, myConnection);
+                myConnection.Open();
+                using (SqlDataReader oReader = oCmd.ExecuteReader())
+                {
+                    int i = 0;
+                    while (oReader.Read())
+                    {
+                        card.Add(new Card());
+                        card[i].Name = oReader["card_name"].ToString();
+                        card[i].Hp = (int)oReader["card_hp"];
+                        card[i].Atk = (int)oReader["card_atk"];
+                        card[i].Rang = (int)oReader["card_rang"];
+                        card[i].SpecialType = (CardSpecType)oReader["card_special_type"];
+                        card[i].SpecialValue = (int)oReader["card_special_value"];
+                        card[i].Type = (CardType)oReader["card_type"];
+                        i++;
                     }
 
                     myConnection.Close();
