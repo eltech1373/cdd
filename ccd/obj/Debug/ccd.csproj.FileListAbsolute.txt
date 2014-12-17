@@ -12,3 +12,5 @@ C:\Users\lada.karaseva\Documents\GitHub\eltech_ccd\cdd\ccd\obj\Debug\ccd.exe
 C:\Users\lada.karaseva\Documents\GitHub\eltech_ccd\cdd\ccd\obj\Debug\ccd.pdb
 C:\Users\lada.karaseva\Documents\GitHub\eltech_ccd\cdd\ccd\obj\Debug\LoginForm.baml
 C:\Users\lada.karaseva\Documents\GitHub\eltech_ccd\cdd\ccd\obj\Debug\LoginForm.g.cs
+C:\Users\lada.karaseva\Documents\GitHub\eltech_ccd\cdd\ccd\obj\Debug\MainWindow.baml
+C:\Users\lada.karaseva\Documents\GitHub\eltech_ccd\cdd\ccd\obj\Debug\MainWindow.g.cs

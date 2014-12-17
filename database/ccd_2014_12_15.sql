@@ -1,3 +1,6 @@
+use CDD
+go
+
 if not exists (select * from sys.tables where name = 'card')
 begin
 	create table [card](
@@ -15,15 +18,15 @@ begin
 end
 go
 
-if not exists (select * from sys.tables where name = 'user')
+if not exists (select * from sys.tables where name = 'users')
 begin
 	create table [user](
-		user_id [uniqueidentifier] not null,
-		user_name [nvarchar](256) not null,
-		user_pass [nvarchar](256) not null,
-		user_type [int] not null
-		constraint [pk_ccd_user] primary key clustered(
-			user_id asc) with (ignore_dup_key = off) on [primary]
+		users_id [uniqueidentifier] not null,
+		users_name [nvarchar](256) not null,
+		users_pass [nvarchar](256) not null,
+		users_type [int] not null
+		constraint [pk_ccd_users] primary key clustered(
+			users_id asc) with (ignore_dup_key = off) on [primary]
 			) on [primary]
 end
 go
@@ -32,7 +35,7 @@ if not exists (select * from sys.tables where name = 'log')
 begin
 	create table [log](
 		log_id [uniqueidentifier] not null,
-		log_user_id [uniqueidentifier] not null,
+		log_users_id [uniqueidentifier] not null,
 		log_result [int] not null,
 		log_date [date] not null
 		constraint [pk_ccd_log] primary key clustered(

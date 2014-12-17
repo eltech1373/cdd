@@ -1,17 +1,5 @@
 ﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
 using System.Windows;
-using System.Windows.Controls;
-using System.Windows.Data;
-using System.Windows.Documents;
-using System.Windows.Input;
-using System.Windows.Media;
-using System.Windows.Media.Imaging;
-using System.Windows.Navigation;
-using System.Windows.Shapes;
 
 namespace ccd
 {
@@ -35,9 +23,10 @@ namespace ccd
                     Pass = passwordBox.Password
                 };
 
+            bool success;
             try
             {
-                DatabaseWorker.Login(user);
+                success = DatabaseWorker.Login(user);
             }
             catch (Exception ex)
             {
@@ -45,10 +34,9 @@ namespace ccd
                 return;
             }
 
-            if (user.Id != Guid.Empty)
+            if (user.Id != Guid.Empty && success)
             {
-                GameForm form = new GameForm();
-                form.Show();
+                DialogResult = true;
             }
             else
             {
