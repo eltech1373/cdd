@@ -28,6 +28,7 @@ namespace ccd
 
     public class Card
     {
+        public Guid Id;
         public string Name;
         public int Hp;
         public int Atk;

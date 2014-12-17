@@ -6,10 +6,10 @@ namespace ccd
     public class GameMechanics
     {
         public Player[] Player { get; private set; }
-        private int _currentPlayer = 0; //attacker
+        public int CurrentPlayer { get; private set; } //attacker
         private int _anotherPlayer
         {
-            get { return _currentPlayer == 0 ? 1 : 0; }
+            get { return CurrentPlayer == 0 ? 1 : 0; }
         }
         
         public GameMechanics()
@@ -29,7 +29,7 @@ namespace ccd
             defCard.Hp -= atkCard.Atk;
             atkCard.Hp -= defCard.Atk;
 
-            Player[_currentPlayer].Gold += defCard.Hp > 0 ? 1 : atkCard.Hp > 0 ? 4 : 3;
+            Player[CurrentPlayer].Gold += defCard.Hp > 0 ? 1 : atkCard.Hp > 0 ? 4 : 3;
             Player[_anotherPlayer].Gold += atkCard.Hp > 0 ? 1 : defCard.Hp > 0 ? 4 : 3;
 
             if (defCard.Hp <= 0)
@@ -38,14 +38,14 @@ namespace ccd
             }
             if (atkCard.Hp <= 0)
             {
-                Player[_currentPlayer].Table.Remove(atkCard);
+                Player[CurrentPlayer].Table.Remove(atkCard);
             }
         }
 
         public void PlayCard(Card currentCard)
         {
-            Player[_currentPlayer].Table.Add(currentCard);
-            Player[_currentPlayer].Hand.Remove(currentCard);
+            Player[CurrentPlayer].Table.Add(currentCard);
+            Player[CurrentPlayer].Hand.Remove(currentCard);
             if (currentCard.Type == CardType.Building)
             {
                 currentCard.Block = false;
@@ -59,15 +59,15 @@ namespace ccd
 
         public void EndTurn()
         {
-            _currentPlayer = _anotherPlayer;
-            Player[_currentPlayer].Morale += 3;
-            if (Player[_currentPlayer].Deck.Count > 0)
+            CurrentPlayer = _anotherPlayer;
+            Player[CurrentPlayer].Morale += 3;
+            if (Player[CurrentPlayer].Deck.Count > 0 && Player[CurrentPlayer].Hand.Count < 5)
             {
-                Card cardGoToHand = Player[_currentPlayer].Deck.First();
-                Player[_currentPlayer].Hand.Add(cardGoToHand);
-                Player[_currentPlayer].Deck.Remove(cardGoToHand);
+                Card cardGoToHand = Player[CurrentPlayer].Deck.First();
+                Player[CurrentPlayer].Hand.Add(cardGoToHand);
+                Player[CurrentPlayer].Deck.Remove(cardGoToHand);
             }
-            foreach (Card card in Player[_currentPlayer].Table)
+            foreach (Card card in Player[CurrentPlayer].Table)
             {
                 card.Block = false;
             }
@@ -78,10 +78,10 @@ namespace ccd
             switch (card.SpecialType)
             {
                 case CardSpecType.AddAtk:
-                    Parallel.ForEach(Player[_currentPlayer].Table, (c) => { c.Atk += card.SpecialValue; });
+                    Parallel.ForEach(Player[CurrentPlayer].Table, (c) => { c.Atk += card.SpecialValue; });
                     break;
                 case CardSpecType.AddHp:
-                    Parallel.ForEach(Player[_currentPlayer].Table, (c) => { c.Hp += card.SpecialValue; });
+                    Parallel.ForEach(Player[CurrentPlayer].Table, (c) => { c.Hp += card.SpecialValue; });
                     break;
                 default:
                     break;

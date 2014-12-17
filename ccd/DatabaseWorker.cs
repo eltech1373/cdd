@@ -51,6 +51,7 @@ namespace ccd
                     while (oReader.Read())
                     {
                         card.Add(new Card());
+                        card[i].Id = Guid.NewGuid();
                         card[i].Name = oReader["card_name"].ToString();
                         card[i].Hp = (int)oReader["card_hp"];
                         card[i].Atk = (int)oReader["card_atk"];

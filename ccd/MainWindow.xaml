@@ -24,7 +24,6 @@
         <Label x:Name="hp2" HorizontalAlignment="Right" Margin="0,0,125,0" Grid.Row="4" VerticalAlignment="Center"/>
         <Button x:Name="endTurnButton" HorizontalAlignment="Left" Margin="698,85,0,0" VerticalAlignment="Center" Width="75" Content="Конец хода" Height="25" Grid.RowSpan="5"/>
 
-
         <StackPanel x:Name="handStackPanel1" HorizontalAlignment="Left" Grid.Row="0" Orientation="Horizontal">
             <Image HorizontalAlignment="Center" Source="/Resources/Image1.png" Stretch="None" Height="85" Width="60" Margin="5,0"/>
             <Image HorizontalAlignment="Center" Source="/Resources/Image1.png" Stretch="None" Height="85" Width="60" Margin="5,0"/>
@@ -32,28 +31,28 @@
             <Image HorizontalAlignment="Center" Source="/Resources/Image1.png" Stretch="None" Height="85" Width="60" Margin="5,0"/>
             <Image HorizontalAlignment="Center" Source="/Resources/Image1.png" Stretch="None" Height="85" Width="60" Margin="5,0"/>
         </StackPanel>
-        <StackPanel x:Name="buildsStackPanel1" HorizontalAlignment="Left" Grid.Row="1" Orientation="Horizontal">
+        <StackPanel x:Name="buildsStackPanel1" HorizontalAlignment="Left" Grid.Row="1" Orientation="Horizontal" Width="350">
             <Image HorizontalAlignment="Center" Source="/Resources/Image1.png" Stretch="None" Height="85" Width="60" Margin="5,0"/>
             <Image HorizontalAlignment="Center" Source="/Resources/Image1.png" Stretch="None" Height="85" Width="60" Margin="5,0"/>
             <Image HorizontalAlignment="Center" Source="/Resources/Image1.png" Stretch="None" Height="85" Width="60" Margin="5,0"/>
             <Image HorizontalAlignment="Center" Source="/Resources/Image1.png" Stretch="None" Height="85" Width="60" Margin="5,0"/>
             <Image HorizontalAlignment="Center" Source="/Resources/Image1.png" Stretch="None" Height="85" Width="60" Margin="5,0"/>
         </StackPanel>
-        <StackPanel x:Name="unitStackPanel1" HorizontalAlignment="Left" Grid.Row="2" Orientation="Horizontal">
+        <StackPanel x:Name="unitStackPanel1" HorizontalAlignment="Left" Grid.Row="2" Orientation="Horizontal" Width="350">
             <Image HorizontalAlignment="Center" Source="/Resources/Image1.png" Stretch="None" Height="85" Width="60" Margin="5,0"/>
             <Image HorizontalAlignment="Center" Source="/Resources/Image1.png" Stretch="None" Height="85" Width="60" Margin="5,0"/>
             <Image HorizontalAlignment="Center" Source="/Resources/Image1.png" Stretch="None" Height="85" Width="60" Margin="5,0"/>
             <Image HorizontalAlignment="Center" Source="/Resources/Image1.png" Stretch="None" Height="85" Width="60" Margin="5,0"/>
             <Image HorizontalAlignment="Center" Source="/Resources/Image1.png" Stretch="None" Height="85" Width="60" Margin="5,0"/>
         </StackPanel>
-        <StackPanel x:Name="unitStackPanel2" HorizontalAlignment="Left" Grid.Row="3" Orientation="Horizontal">
+        <StackPanel x:Name="unitStackPanel2" HorizontalAlignment="Left" Grid.Row="3" Orientation="Horizontal" Width="350">
             <Image HorizontalAlignment="Center" Source="/Resources/Image1.png" Stretch="None" Height="85" Width="60" Margin="5,0"/>
             <Image HorizontalAlignment="Center" Source="/Resources/Image1.png" Stretch="None" Height="85" Width="60" Margin="5,0"/>
             <Image HorizontalAlignment="Center" Source="/Resources/Image1.png" Stretch="None" Height="85" Width="60" Margin="5,0"/>
             <Image HorizontalAlignment="Center" Source="/Resources/Image1.png" Stretch="None" Height="85" Width="60" Margin="5,0"/>
             <Image HorizontalAlignment="Center" Source="/Resources/Image1.png" Stretch="None" Height="85" Width="60" Margin="5,0"/>
         </StackPanel>
-        <StackPanel x:Name="buildsStackPanel2" HorizontalAlignment="Left" Grid.Row="4" Orientation="Horizontal">
+        <StackPanel x:Name="buildsStackPanel2" HorizontalAlignment="Left" Grid.Row="4" Orientation="Horizontal" Width="350">
             <Image HorizontalAlignment="Center" Source="/Resources/Image1.png" Stretch="None" Height="85" Width="60" Margin="5,0"/>
             <Image HorizontalAlignment="Center" Source="/Resources/Image1.png" Stretch="None" Height="85" Width="60" Margin="5,0"/>
             <Image HorizontalAlignment="Center" Source="/Resources/Image1.png" Stretch="None" Height="85" Width="60" Margin="5,0"/>
