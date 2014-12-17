@@ -5,15 +5,16 @@ namespace ccd
 {
     public class GameMechanics
     {
-        public Player[] Player = new Player[2];
+        public Player[] Player { get; private set; }
         private int _currentPlayer = 0; //attacker
         private int _anotherPlayer
         {
             get { return _currentPlayer == 0 ? 1 : 0; }
         }
-
+        
         public GameMechanics()
         {
+            Player = new Player[2];
             Player[0] = new Player();
             Player[1] = new Player();
         }
