@@ -1,8 +1,5 @@
 ﻿using System;
 using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
 
 namespace ccd
 {
@@ -20,10 +17,21 @@ namespace ccd
 
             for (int i = 0; i < count; i++)
             {
-                newDeck.Add(allCards[rnd.Next(0, allCards.Count)]);
+                newDeck.Add(allCards[rnd.Next(0, allCards.Count)].Copy());
             }
 
             return newDeck;
+        }
+
+        public static Uri GetImageByName(string name)
+        {
+            switch (name)
+            {
+                case "mag":
+                    return new Uri("/Resource/mag.png", UriKind.Relative);
+                default:
+                    return new Uri("/Resource/Image1.png", UriKind.Relative);
+            }
         }
     }
 }

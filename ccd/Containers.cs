@@ -19,7 +19,7 @@ namespace ccd
         {
             Hp = 30;
             Gold = 5;
-            Morale = 0;
+            Morale = 3;
             Hand = Helper.CreateNewDeck(Helper.HandCount);
             Deck = Helper.CreateNewDeck(Helper.DeckCount);
             Table = new List<Card>();
@@ -49,6 +49,23 @@ namespace ccd
         public Card()
         {
             
+        }
+
+        public Card Copy()
+        {
+            Card newCard = new Card()
+                {
+                    Atk = this.Atk,
+                    Block = this.Block,
+                    Hp = this.Hp,
+                    Id = this.Id,
+                    Name = this.Name,
+                    Rang = this.Rang,
+                    SpecialType = this.SpecialType,
+                    SpecialValue = this.SpecialValue,
+                    Type = this.Type
+                };
+            return newCard;
         }
     }
 

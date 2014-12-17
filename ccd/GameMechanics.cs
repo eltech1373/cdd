@@ -19,11 +19,11 @@ namespace ccd
             Player[1] = new Player();
         }
 
-        public void Attack(Card atkCard, Card defCard)
+        public bool Attack(Card atkCard, Card defCard)
         {
-            if (atkCard.Block || atkCard.Type == CardType.Building)
+            if (atkCard.Block || atkCard.Type == CardType.Building || !Player[CurrentPlayer].Table.Contains(atkCard) || !Player[_anotherPlayer].Table.Contains(defCard))
             {
-                return;
+                return false;
             }
 
             defCard.Hp -= atkCard.Atk;
@@ -31,6 +31,8 @@ namespace ccd
 
             Player[CurrentPlayer].Gold += defCard.Hp > 0 ? 1 : atkCard.Hp > 0 ? 4 : 3;
             Player[_anotherPlayer].Gold += atkCard.Hp > 0 ? 1 : defCard.Hp > 0 ? 4 : 3;
+
+            atkCard.Block = true;
 
             if (defCard.Hp <= 0)
             {
@@ -40,21 +42,40 @@ namespace ccd
             {
                 Player[CurrentPlayer].Table.Remove(atkCard);
             }
+
+            return true;
         }
 
-        public void PlayCard(Card currentCard)
+        public bool PlayCard(Card currentCard)
         {
-            Player[CurrentPlayer].Table.Add(currentCard);
-            Player[CurrentPlayer].Hand.Remove(currentCard);
-            if (currentCard.Type == CardType.Building)
+            if (Player[CurrentPlayer].Hand.Contains(currentCard))
             {
-                currentCard.Block = false;
-                _getSpecialAbilities(currentCard);
+                if (currentCard.Type == CardType.Unit && Player[CurrentPlayer].Morale < currentCard.Rang)
+                {
+                    return false;
+                }
+                else if (currentCard.Type == CardType.Building && Player[CurrentPlayer].Gold < currentCard.Rang)
+                {
+                    return false;
+                }
+                 
+                Player[CurrentPlayer].Table.Add(currentCard);
+                Player[CurrentPlayer].Hand.Remove(currentCard);
+                if (currentCard.Type == CardType.Building)
+                {
+                    currentCard.Block = false;
+                    _getSpecialAbilities(currentCard);
+                    Player[CurrentPlayer].Gold -= currentCard.Rang;
+                }
+                else
+                {
+                    currentCard.Block = true;
+                    Player[CurrentPlayer].Morale -= currentCard.Rang;
+                }
+                return true;
             }
-            else
-            {
-                currentCard.Block = true;
-            }
+
+            return false;
         }
 
         public void EndTurn()
