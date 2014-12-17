@@ -52,7 +52,41 @@ namespace ccd
             moraleLabel2.Content = _game.Player[1].Morale;
             goldLabel2.Content = _game.Player[1].Gold;
 
+            for (int i = 0; i < handStackPanel1.Children.Count; i++)
+            {
+                var child = handStackPanel1.Children[i];
+                child.Visibility = _game.Player[0].Hand[i].Hp > 0 ? Visibility.Visible : Visibility.Hidden;
+            }
 
+            for (int i = 0; i < buildsStackPanel1.Children.Count; i++)
+            {
+                var child = buildsStackPanel1.Children[i];
+                child.Visibility = _game.Player[0].Hand[i].Hp < 0 ? Visibility.Visible : Visibility.Hidden;
+            }
+
+            for (int i = 0; i < unitStackPanel1.Children.Count; i++)
+            {
+                var child = unitStackPanel1.Children[i];
+                child.Visibility = _game.Player[0].Hand[i].Hp > 0 ? Visibility.Visible : Visibility.Hidden;
+            }
+
+            for (int i = 0; i < handStackPanel2.Children.Count; i++)
+            {
+                var child = handStackPanel2.Children[i];
+                child.Visibility = _game.Player[1].Hand[i].Hp > 0 ? Visibility.Visible : Visibility.Hidden;
+            }
+
+            for (int i = 0; i < buildsStackPanel2.Children.Count; i++)
+            {
+                var child = buildsStackPanel2.Children[i];
+                child.Visibility = _game.Player[1].Hand[i].Hp > 0 ? Visibility.Visible : Visibility.Hidden;
+            }
+
+            for (int i = 0; i < unitStackPanel2.Children.Count; i++)
+            {
+                var child = unitStackPanel2.Children[i];
+                child.Visibility = _game.Player[1].Hand[i].Hp > 0 ? Visibility.Visible : Visibility.Hidden;
+            }
         }
     }
 }

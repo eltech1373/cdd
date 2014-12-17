@@ -11,12 +11,7 @@
             <RowDefinition/>
             <RowDefinition/>
         </Grid.RowDefinitions>
-        <StackPanel x:Name="handStackPanel1" HorizontalAlignment="Left" Grid.Row="0"/>
-        <StackPanel x:Name="buildsStackPanel1" HorizontalAlignment="Left" Grid.Row="1"/>
-        <StackPanel x:Name="unitStackPanel1" HorizontalAlignment="Left" Grid.Row="2"/>
-        <StackPanel x:Name="unitStackPanel2" HorizontalAlignment="Left" Grid.Row="3"/>
-        <StackPanel x:Name="buildsStackPanel2" HorizontalAlignment="Left" Grid.Row="4"/>
-        <StackPanel x:Name="handStackPanel2" HorizontalAlignment="Left" Grid.Row="5"/>
+
         <Label x:Name="moraleLabel1" HorizontalAlignment="Right" Margin="0,10,50,0" VerticalAlignment="Top" Grid.Row="0"/>
         <Label x:Name="goldLabel1" HorizontalAlignment="Right" Margin="0,41,50,0" VerticalAlignment="Top" Grid.Row="0"/>
         <Label x:Name="moraleLabel2" HorizontalAlignment="Right" Margin="0,10,50,0" VerticalAlignment="Top" Grid.Row="5"/>
@@ -27,6 +22,50 @@
         <Rectangle x:Name="castle1" Fill="#FFA08C0E" Grid.Row="1" Stroke="Black" HorizontalAlignment="Right" Margin="0,5,100,5" Width="84"/>
         <Label x:Name="hp1" HorizontalAlignment="Right" Margin="0,0,125,0" Grid.Row="1" VerticalAlignment="Center"/>
         <Label x:Name="hp2" HorizontalAlignment="Right" Margin="0,0,125,0" Grid.Row="4" VerticalAlignment="Center"/>
-        <Button x:Name="endTurnButton" HorizontalAlignment="Left" Margin="698,85,0,0" Grid.Row="2" VerticalAlignment="Top" Width="75" Grid.RowSpan="2" Content="Конец хода"/>
+        <Button x:Name="endTurnButton" HorizontalAlignment="Left" Margin="698,85,0,0" VerticalAlignment="Center" Width="75" Content="Конец хода" Height="25" Grid.RowSpan="5"/>
+
+
+        <StackPanel x:Name="handStackPanel1" HorizontalAlignment="Left" Grid.Row="0" Orientation="Horizontal">
+            <Image HorizontalAlignment="Center" Source="/Resources/Image1.png" Stretch="None" Height="85" Width="60" Margin="5,0"/>
+            <Image HorizontalAlignment="Center" Source="/Resources/Image1.png" Stretch="None" Height="85" Width="60" Margin="5,0"/>
+            <Image HorizontalAlignment="Center" Source="/Resources/Image1.png" Stretch="None" Height="85" Width="60" Margin="5,0"/>
+            <Image HorizontalAlignment="Center" Source="/Resources/Image1.png" Stretch="None" Height="85" Width="60" Margin="5,0"/>
+            <Image HorizontalAlignment="Center" Source="/Resources/Image1.png" Stretch="None" Height="85" Width="60" Margin="5,0"/>
+        </StackPanel>
+        <StackPanel x:Name="buildsStackPanel1" HorizontalAlignment="Left" Grid.Row="1" Orientation="Horizontal">
+            <Image HorizontalAlignment="Center" Source="/Resources/Image1.png" Stretch="None" Height="85" Width="60" Margin="5,0"/>
+            <Image HorizontalAlignment="Center" Source="/Resources/Image1.png" Stretch="None" Height="85" Width="60" Margin="5,0"/>
+            <Image HorizontalAlignment="Center" Source="/Resources/Image1.png" Stretch="None" Height="85" Width="60" Margin="5,0"/>
+            <Image HorizontalAlignment="Center" Source="/Resources/Image1.png" Stretch="None" Height="85" Width="60" Margin="5,0"/>
+            <Image HorizontalAlignment="Center" Source="/Resources/Image1.png" Stretch="None" Height="85" Width="60" Margin="5,0"/>
+        </StackPanel>
+        <StackPanel x:Name="unitStackPanel1" HorizontalAlignment="Left" Grid.Row="2" Orientation="Horizontal">
+            <Image HorizontalAlignment="Center" Source="/Resources/Image1.png" Stretch="None" Height="85" Width="60" Margin="5,0"/>
+            <Image HorizontalAlignment="Center" Source="/Resources/Image1.png" Stretch="None" Height="85" Width="60" Margin="5,0"/>
+            <Image HorizontalAlignment="Center" Source="/Resources/Image1.png" Stretch="None" Height="85" Width="60" Margin="5,0"/>
+            <Image HorizontalAlignment="Center" Source="/Resources/Image1.png" Stretch="None" Height="85" Width="60" Margin="5,0"/>
+            <Image HorizontalAlignment="Center" Source="/Resources/Image1.png" Stretch="None" Height="85" Width="60" Margin="5,0"/>
+        </StackPanel>
+        <StackPanel x:Name="unitStackPanel2" HorizontalAlignment="Left" Grid.Row="3" Orientation="Horizontal">
+            <Image HorizontalAlignment="Center" Source="/Resources/Image1.png" Stretch="None" Height="85" Width="60" Margin="5,0"/>
+            <Image HorizontalAlignment="Center" Source="/Resources/Image1.png" Stretch="None" Height="85" Width="60" Margin="5,0"/>
+            <Image HorizontalAlignment="Center" Source="/Resources/Image1.png" Stretch="None" Height="85" Width="60" Margin="5,0"/>
+            <Image HorizontalAlignment="Center" Source="/Resources/Image1.png" Stretch="None" Height="85" Width="60" Margin="5,0"/>
+            <Image HorizontalAlignment="Center" Source="/Resources/Image1.png" Stretch="None" Height="85" Width="60" Margin="5,0"/>
+        </StackPanel>
+        <StackPanel x:Name="buildsStackPanel2" HorizontalAlignment="Left" Grid.Row="4" Orientation="Horizontal">
+            <Image HorizontalAlignment="Center" Source="/Resources/Image1.png" Stretch="None" Height="85" Width="60" Margin="5,0"/>
+            <Image HorizontalAlignment="Center" Source="/Resources/Image1.png" Stretch="None" Height="85" Width="60" Margin="5,0"/>
+            <Image HorizontalAlignment="Center" Source="/Resources/Image1.png" Stretch="None" Height="85" Width="60" Margin="5,0"/>
+            <Image HorizontalAlignment="Center" Source="/Resources/Image1.png" Stretch="None" Height="85" Width="60" Margin="5,0"/>
+            <Image HorizontalAlignment="Center" Source="/Resources/Image1.png" Stretch="None" Height="85" Width="60" Margin="5,0"/>
+        </StackPanel>
+        <StackPanel x:Name="handStackPanel2" HorizontalAlignment="Left" Grid.Row="5" Orientation="Horizontal">
+            <Image HorizontalAlignment="Center" Source="/Resources/Image1.png" Stretch="None" Height="85" Width="60" Margin="5,0"/>
+            <Image HorizontalAlignment="Center" Source="/Resources/Image1.png" Stretch="None" Height="85" Width="60" Margin="5,0"/>
+            <Image HorizontalAlignment="Center" Source="/Resources/Image1.png" Stretch="None" Height="85" Width="60" Margin="5,0"/>
+            <Image HorizontalAlignment="Center" Source="/Resources/Image1.png" Stretch="None" Height="85" Width="60" Margin="5,0"/>
+            <Image HorizontalAlignment="Center" Source="/Resources/Image1.png" Stretch="None" Height="85" Width="60" Margin="5,0"/>
+        </StackPanel>
     </Grid>
 </Window>

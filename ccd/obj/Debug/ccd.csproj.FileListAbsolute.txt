@@ -2,7 +2,10 @@ C:\Users\lada.karaseva\Documents\GitHub\ccd\ccd\bin\Debug\ccd.exe.config
 C:\Users\lada.karaseva\Documents\GitHub\eltech_ccd\cdd\ccd\bin\Debug\ccd.exe.config
 C:\Users\lada.karaseva\Documents\GitHub\eltech_ccd\cdd\ccd\bin\Debug\ccd.exe
 C:\Users\lada.karaseva\Documents\GitHub\eltech_ccd\cdd\ccd\bin\Debug\ccd.pdb
-C:\Users\lada.karaseva\Documents\GitHub\eltech_ccd\cdd\ccd\obj\Debug\ccd.csprojResolveAssemblyReference.cache
+C:\Users\lada.karaseva\Documents\GitHub\eltech_ccd\cdd\ccd\obj\Debug\LoginForm.baml
+C:\Users\lada.karaseva\Documents\GitHub\eltech_ccd\cdd\ccd\obj\Debug\MainWindow.baml
+C:\Users\lada.karaseva\Documents\GitHub\eltech_ccd\cdd\ccd\obj\Debug\LoginForm.g.cs
+C:\Users\lada.karaseva\Documents\GitHub\eltech_ccd\cdd\ccd\obj\Debug\MainWindow.g.cs
 C:\Users\lada.karaseva\Documents\GitHub\eltech_ccd\cdd\ccd\obj\Debug\App.g.cs
 C:\Users\lada.karaseva\Documents\GitHub\eltech_ccd\cdd\ccd\obj\Debug\ccd_MarkupCompile.cache
 C:\Users\lada.karaseva\Documents\GitHub\eltech_ccd\cdd\ccd\obj\Debug\ccd.g.resources
@@ -10,8 +13,3 @@ C:\Users\lada.karaseva\Documents\GitHub\eltech_ccd\cdd\ccd\obj\Debug\ccd.Propert
 C:\Users\lada.karaseva\Documents\GitHub\eltech_ccd\cdd\ccd\obj\Debug\ccd.csproj.GenerateResource.Cache
 C:\Users\lada.karaseva\Documents\GitHub\eltech_ccd\cdd\ccd\obj\Debug\ccd.exe
 C:\Users\lada.karaseva\Documents\GitHub\eltech_ccd\cdd\ccd\obj\Debug\ccd.pdb
-C:\Users\lada.karaseva\Documents\GitHub\eltech_ccd\cdd\ccd\obj\Debug\LoginForm.baml
-C:\Users\lada.karaseva\Documents\GitHub\eltech_ccd\cdd\ccd\obj\Debug\LoginForm.g.cs
-C:\Users\lada.karaseva\Documents\GitHub\eltech_ccd\cdd\ccd\obj\Debug\MainWindow.baml
-C:\Users\lada.karaseva\Documents\GitHub\eltech_ccd\cdd\ccd\obj\Debug\MainWindow.g.cs
-C:\Users\lada.karaseva\Documents\GitHub\eltech_ccd\cdd\ccd\obj\Debug\GeneratedInternalTypeHelper.g.cs

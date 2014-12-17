@@ -1,5 +1,6 @@
 ﻿using System;
 using System.Windows;
+using System.Windows.Input;
 
 namespace ccd
 {
@@ -12,6 +13,15 @@ namespace ccd
         {
             InitializeComponent();
             loginButton.Click += LoginButtonOnClick;
+            passwordBox.KeyUp += PasswordBoxOnKeyUp;
+        }
+
+        private void PasswordBoxOnKeyUp(object sender, KeyEventArgs e)
+        {
+            if (e.Key == Key.Enter)
+            {
+                LoginButtonOnClick(this, e);
+            }
         }
 
         private void LoginButtonOnClick(object sender, RoutedEventArgs e)
