@@ -1,16 +1,16 @@
 use CCD
 go
 
-IF OBJECT_ID ('create_right', 'TR') IS NOT NULL
-   DROP TRIGGER create_right;
+IF OBJECT_ID ('check_deck_count', 'TR') IS NOT NULL
+   DROP TRIGGER check_deck_count;
 GO
-CREATE TRIGGER create_right
-ON [gamer]
+CREATE TRIGGER check_deck_count
+ON [card_in_deck]
 FOR INSERT
 AS
-	if (select count(*) from inserted join [right] on right_user_type = gamer_type) = 0
+	if exists (select count(card_in_deck_deck_id) from card_in_deck group by card_in_deck_deck_id having count(card_in_deck_deck_id) > 30)
 	begin
-		insert into [right] (right_id, right_user_type, right_edit_card, right_edit_log, right_edit_user)
-			select NEWID(), gamer_type, 0, 0, 0 from inserted group by gamer_type
+		raiserror('Cards in the deck can be no more than 30', 16, 1);
+		rollback transaction;
 	end
 GO
