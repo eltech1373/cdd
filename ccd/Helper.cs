@@ -27,7 +27,7 @@ namespace ccd
         {
             switch (name)
             {
-                case "mag":
+                case "Маг":
                     return new Uri("/Resource/mag.png", UriKind.Relative);
                 default:
                     return new Uri("/Resource/Image1.png", UriKind.Relative);

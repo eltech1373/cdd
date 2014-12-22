@@ -7,7 +7,7 @@ begin
 		gamer_id [uniqueidentifier] not null,
 		gamer_name [nvarchar](256) not null,
 		gamer_pass [nvarchar](256) not null,
-		gamer_type [int] not null,
+		gamer_right_id [uniqueidentifier] not null,
 		gamer_title_id [uniqueidentifier] null
 		constraint [pk_ccd_gamer] primary key clustered(
 			gamer_id asc) with (ignore_dup_key = off) on [primary]
@@ -62,6 +62,10 @@ begin
 		constraint [pk_ccd_right] primary key clustered(
 			right_id asc) with (ignore_dup_key = off) on [primary]
 	) on [primary]
+	
+	alter table [gamer] with check add constraint [fx_ccd_gamer_right]
+	foreign key ([gamer_right_id])
+	references [right] ([right_id])
 end
 go
 
